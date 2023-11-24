@@ -1,0 +1,393 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(12, 12, 12, 0.7), rgba(139, 0, 0, 0.7)); 
+    overflow: hidden; 
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('img/repartidorenbici.jpeg') no-repeat center center;
+    background-size: cover;
+    filter: blur(8px);
+    z-index: -2;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 1;
+    color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+    background-color: #f92f2f; 
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff; 
+    transition: transform 0.3s; 
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    transform: scale(1.1); 
+}
+
+.navbar-brand {
+    color: #fff; 
+    transition: transform 0.3s; 
+}
+
+.navbar-brand:hover {
+    transform: scale(1.1); 
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.rights-div {
+    background-color: #FFFFFF;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.rights-div h2 {
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.feature-section {
+    margin-top: 50px;  
+}
+
+.text-highlight i {
+    font-size: 1.8rem; 
+    color: #f92f2f;
+    margin-bottom: 20px; 
+}
+
+.text-highlight p {
+    font-size: 0.9rem; 
+    color: #000;
+    margin-top: 10px; 
+    margin-bottom: 0;
+}
+
+.row.text-highlight > .col-md-3 {
+    padding-left: 20px;  
+    padding-right: 20px;
+}
+
+.card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 70px 0;
+    padding: 25px;
+}
+
+.card {
+    width: 80%;  
+    max-width: 1100px; 
+    min-height: 650px;
+    background-color: #ffffff;
+    box-shadow: 15px 15px 30px #191919,
+                -15px -15px 30px #292929;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+                transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+                box-shadow 0.5s;  
+    padding: 25px;
+    overflow-y: auto;
+}
+
+.card:hover {
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    transform: scale(1.05);
+    box-shadow: 15px 15px 30px red,   
+                -15px -15px 30px red; 
+}
+
+.card-content {
+    font-family: 'Roboto', sans-serif;  
+}
+
+.card-content h2 {
+    color: #212121;
+    margin-bottom: 25px;
+    font-size: 2.5em;  
+    font-weight: 700;  
+    text-transform: uppercase;  
+    text-align: center;  
+    letter-spacing: 2px;  
+}
+
+.card-content p {
+    color: #333;  
+    margin-bottom: 25px;  
+    font-size: 1.4em;  
+    line-height: 1.8;  
+    font-weight: 400;  
+}
+
+.rights-section {
+    margin-top: 50px;
+}
+
+.rights-section h2 {
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px; 
+}
+
+.rights-highlight i {
+    font-size: 1.8rem;
+    color: #f92f2f;
+    margin-bottom: 20px;
+}
+
+.rights-highlight p {
+    font-size: 0.9rem;
+    color: #000;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center; 
+}
+
+.rights-section .row.rights-highlight > .col-md-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px; 
+}
+
+
+.imagen-con-texto {
+    display: grid;
+    grid-template-rows: auto 1fr; /* Dos filas: una para el encabezado y otra para el contenido */
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.imagen-con-texto img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.capa-efecto {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.texto-encabezado {
+    
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+.texto-encabezado h1, .texto-encabezado h3 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.texto-encabezado h2 {
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.texto-encabezado p, .texto-encabezado ol li {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.texto-encabezado ol {
+    display: inline-block;
+    text-align: start;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas con el mismo tamaño */
+    gap: 30px; /* Espacio entre las columnas */
+    position: absolute;
+    top: 63%; /* Disminuye este valor para mover el contenido hacia arriba */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    color: white;
+    text-align: center;
+    z-index: 3;
+}
+
+
+.seccion {
+    margin: 20px; /* Ajustar el margen según sea necesario */
+    text-align: center;
+}
+
+.seccion h3 {
+    font-size: 2em;
+    margin-bottom: 15px; /* Asegura un espaciado debajo del título */
+}
+
+.seccion p {
+    font-size: 1.4em; /* Ajusta el tamaño del texto según tus necesidades */
+    line-height: 1.6; /* Ajusta el espaciado entre líneas para mejorar la legibilidad */
+    /* Puedes agregar más estilos aquí si es necesario */
+}
+
+
+
+
+/* Estilos para botones y enlaces */
+.botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.botones a {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    transition: box-shadow 0.3s;
+}
+
+.botones a.shadow__btn--blue {
+    background: rgb(0, 123, 255);
+    box-shadow: 0 0 25px rgb(0, 123, 255);
+}
+
+.botones a.shadow__btn--blue:hover {
+    box-shadow: 0 0 5px rgb(0, 123, 255),
+                0 0 25px rgb(0, 123, 255),
+                0 0 50px rgb(0, 123, 255),
+                0 0 100px rgb(0, 123, 255);
+}
+
+.botones a.shadow__btn--green {
+    background: rgb(37, 211, 102);
+    box-shadow: 0 0 25px rgb(37, 211, 102);
+    margin-right: 0;
+}
+
+.botones a.shadow__btn--green:hover {
+    box-shadow: 0 0 5px rgb(37, 211, 102),
+                0 0 25px rgb(37, 211, 102),
+                0 0 50px rgb(37, 211, 102),
+                0 0 100px rgb(37, 211, 102);
+}
+
+.botones a i {
+    margin-right: 5px;
+}
+
+.botones a .fas, .botones a .fab {
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a columna */
+    justify-content: center; /* Centra elementos verticalmente */
+    align-items: center; /* Centra elementos horizontalmente */
+    padding: 30px;  
+    background-color: #f92f2f;  
+    color: #fff;
+    height: 100%; /* Ocupa todo el alto disponible */
+}
+
+.footer-section {
+    display: flex; /* Hace que los párrafos fluyan horizontalmente */
+    flex-wrap: wrap; /* Si el espacio no es suficiente, se envuelve al siguiente línea */
+    justify-content: center; /* Centra los párrafos horizontalmente */
+    margin: 0 50px;  
+    text-align: center; /* Centra el texto dentro de cada párrafo */
+}
+
+.footer-section h5 {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-bottom: 20px;
+    font-size: 1.5rem;  
+}
+
+.footer-section p {
+    margin: 0 15px;  /* Ajustado el margen para un espacio equitativo entre los ítems */
+    font-size: 1.2rem;  
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 15px;  
+    background-color: #d72626;  
+    color: #fff;
+    font-size: 1.1rem;  
+}
+
+    
+    
